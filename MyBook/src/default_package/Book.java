@@ -4,9 +4,12 @@ public class Book {
 	private String name;
 	private String text;
 
+	public Book() {}
+	
 	public Book(String name) {
 		super();
 		this.name = name;
+		this.text = text;
 	}
 
 	public String getName() {
@@ -26,15 +29,27 @@ public class Book {
 	}
 
 	public void createNewParagraph(String paragraph){
-		this.text = text + paragraph + '\n';
+		if(text != null){
+			this.text = text + paragraph + '\n';
+		}else {
+			this.text = paragraph + '\n';
+		}
 	}
 	public void createNewImage(String image) {
-		this.text = text + image + '\n';
+		if(text != null) {
+			this.text = text + image + '\n';
+		}else {
+			this.text = image + '\n';
+		}
 	}
 	public void createNewTable(String table) {
-		this.text = text + table + '\n';
+		if(text != null) {
+			this.text = text + table + '\n';
+		}else {
+			this.text = table + '\n';
+		}
 	}
-	public String print() {
-		return text;
+	public void print() {
+		System.out.print(text);
 	}
 }
