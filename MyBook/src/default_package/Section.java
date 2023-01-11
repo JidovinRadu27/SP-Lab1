@@ -33,9 +33,8 @@ public class Section implements Element{
 	}
 
 	@Override
-	public void get(Element element) {
-		// TODO Auto-generated method stub
-		
+	public Element get(int element) {
+		return null;		
 	}
 	
 	

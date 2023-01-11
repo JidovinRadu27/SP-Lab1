@@ -33,10 +33,9 @@ public class Paragraph implements Element {
 		
 	}
 
-	@Override
-	public void get(Element element) {
-		// TODO Auto-generated method stub
-		
-	}	
+    @Override
+    public Element get(int element) {
+        return null;
+    }	
 	
 }

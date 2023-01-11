@@ -1,44 +1,57 @@
 package default_package;
 
-public class Image implements Element{
-	
-	private String imageName;
+import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
-	public Image(String imageName) {
-		super();
-		this.setImageName(imageName);
-	}
-	
-	public String getImageName() {
-		return imageName;
-	}
+public class Image implements Element,Picture {
 
-	public void setImageName(String imageName) {
-		this.imageName = imageName;
-	}
+    private String imageName;
+
+    public Image(String name)
+    {
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        imageName=name;
+    }
+
+    public void print()
+    {
+        System.out.println("Image with name: "+imageName);
+    }
+
+    public void add(Element e){
+
+    }
+    public void remove(Element e)
+    {
+
+    }
+
+//    public int get(int x) {
+//        
+//    }
+
+
+    @Override
+    public String url() {
+        return null;
+    }
+
+    @Override
+    public Dimension dim() {
+        return null;
+    }
+
+    @Override
+    public String content() {
+        return null;
+    }
 
 	@Override
-	public void print() {
-		System.out.println("Image with name: " + imageName);
-		
+	public Element get(int element) {
+		return null;		
 	}
-
-	@Override
-	public void add(Element element) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void remove(Element element) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void get(Element element) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
