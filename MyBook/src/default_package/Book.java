@@ -3,11 +3,11 @@ package default_package;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
+public class Book extends Section{
 	private String name;
 	private String text;
 	private ArrayList<Author> authors;
-	private ArrayList<Chapter> chapters;
+	private ArrayList<Chapter> chapters;	
 	private ArrayList<TableOfContents> tableOfContents;
 
 	public Book() {}
@@ -18,6 +18,7 @@ public class Book {
 		this.text = text;
 		this.authors =  new ArrayList<>();
 		this.chapters = new ArrayList<>();
+		
 	}
 
 	public String getName() {
@@ -48,21 +49,23 @@ public class Book {
 	public Chapter getChapter(int i){
 		return chapters.get(i); 
 	}
-//	public void createNewImage(String image) {
-//		if(text != null) {
-//			this.text = text + image + '\n';
-//		}else {
-//			this.text = image + '\n';
-//		}
-//	}
-//	public void createNewTable(String table) {
-//		if(text != null) {
-//			this.text = text + table + '\n';
-//		}else {
-//			this.text = table + '\n';
-//		}
-//	}
-	public void print() {
-		System.out.print(text);
+
+	public void printAuthors() {
+		for(int i=0; i < authors.size(); i++) {
+			System.out.println(authors.get(i).toString());
+		}
 	}
+
+	public ArrayList<TableOfContents> getTableOfContents() {
+		return tableOfContents;
+	}
+
+	public void setTableOfContents(ArrayList<TableOfContents> tableOfContents) {
+		this.tableOfContents = tableOfContents;
+	}
+	
+//	public void print() {
+//		System.out.print(text);
+//	}
+
 }

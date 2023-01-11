@@ -1,20 +1,28 @@
 package default_package;
 
-public class Image implements Element{
-	
-	private String imageName;
+import java.util.ArrayList;
 
-	public Image(String imageName) {
+public class Section implements Element{
+
+	private String name;
+	private ArrayList sections;
+	
+	
+	
+	public Section(String name, ArrayList sections) {
 		super();
-		this.setImageName(imageName);
+		this.name = name;
+		this.sections = new ArrayList();
 	}
 	
-	public String getImageName() {
-		return imageName;
+	
+
+	public String getName() {
+		return name;
 	}
 
-	public void setImageName(String imageName) {
-		this.imageName = imageName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
@@ -40,5 +48,6 @@ public class Image implements Element{
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	
 }
