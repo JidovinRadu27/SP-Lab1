@@ -19,7 +19,7 @@ public class TableOfContents implements Element{
 
 	@Override
 	public void print() {
-		// TODO Auto-generated method stub
+		System.out.println(table);
 		
 	}
 

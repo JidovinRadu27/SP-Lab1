@@ -4,19 +4,12 @@ public class Author extends Book {
 	private String name;
 
 	public Author(String name) {
-		super();
+		super(name);
 		this.name = name;
 	}
 
 	public String getName() {
 		return name;
 	}
-
-	@Override
-	public String toString() {
-		return "Author [name=" + name + "]";
-	}
-
-	
 	
 }

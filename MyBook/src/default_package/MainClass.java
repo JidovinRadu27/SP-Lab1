@@ -13,25 +13,18 @@ public class MainClass {
 		Section cap11 = new Section("Capitolul 1.1");
 		Section cap111 = new Section("Capitolul 1.1.1");
 		Section cap1111 = new Section("Capitolul 1.1.1.1");	
+
+		noapteBuna.addContent(new Paragraph("Multumesc celor care ..."));
+		noapteBuna.addContent(cap1);
+		cap1.add(new Paragraph("Moto capitol"));
+		cap1.add(cap11);
+		cap11.add(new Paragraph("Text from subchapter 1.1"));
+		cap11.add(cap111);
+		cap111.add(new Paragraph("Text from subchapter 1.1.1"));
+		cap111.add(cap1111);
+		cap1111.add(new Image("Image subchapter 1.1.1.1"));
+		noapteBuna.print();
 		
-//		Book discoTitanic = new Book("Disco Titanic");
-//		Author rpGheo = new Author("Radu Pavel Gheo");
-//		
-//		discoTitanic.addAuthor(rpGheo);
-//		int indexChapterOne = discoTitanic.createChapter("capitol 1");
-//		Chapter chp1 = discoTitanic.getChapter(indexChapterOne);
-//		int indexOfSubChapterOne = chp1.createSubChapter("Subcapitol 1.1");
-//		SubChapter csOneOne = chp1.getSubChapter(indexOfSubChapterOne);
-//		
-//		
-//		csOneOne.createNewParagraph("Paragraph 1");
-//		csOneOne.createNewParagraph("Paragraph 2");
-//		csOneOne.createNewParagraph("Paragraph 3");
-//		csOneOne.createNewImage("Image 1");
-//		csOneOne.createNewParagraph("Paragraph 4");
-//		csOneOne.createNewTable("Table 1");
-//		csOneOne.createNewParagraph("Paragraph 5");
-//		csOneOne.print();
 	}
 	
 }

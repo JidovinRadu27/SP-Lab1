@@ -18,13 +18,12 @@ public class Paragraph implements Element {
 
 	@Override
 	public void print() {
-		// TODO Auto-generated method stub
+		System.out.println("Paragraph: " + name);
 		
 	}
 
 	@Override
 	public void add(Element element) {
-		// TODO Auto-generated method stub
 		
 	}
 
