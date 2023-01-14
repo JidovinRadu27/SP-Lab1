@@ -1,8 +1,10 @@
-package default_package;
+package models;
 
 import java.awt.*;
 
-public class ImageProxy implements Picture, Element {
+import services.Picture;
+
+public class ImageProxy implements Picture, Element, Visitee {
         
 	private String url;
         private Dimension dim;
@@ -58,6 +60,13 @@ public class ImageProxy implements Picture, Element {
     public Element get(int element) {
         return null;
     }
+
+
+	@Override
+	public void accept(Visitor x) {
+		x.visitImageProxy(this);
+		
+	}
 
 
 }

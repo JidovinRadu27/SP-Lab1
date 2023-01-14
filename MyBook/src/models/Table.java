@@ -1,6 +1,6 @@
-package default_package;
+package models;
 
-public class Table implements Element{
+public class Table implements Element, Visitee{
 
 	private String name;
 	
@@ -39,5 +39,11 @@ public class Table implements Element{
     public Element get(int element) {
         return null;
     }
+
+	@Override
+	public void accept(Visitor x) {
+		x.visitTable(this);
+		
+	}
 	
 }

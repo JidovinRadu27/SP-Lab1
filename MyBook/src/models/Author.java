@@ -1,4 +1,4 @@
-package default_package;
+package models;
 
 public class Author extends Book {
 	private String name;

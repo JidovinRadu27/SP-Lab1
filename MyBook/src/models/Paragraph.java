@@ -1,6 +1,11 @@
-package default_package;
+package models;
 
-public class Paragraph implements Element {
+import services.AlignCenter;
+import services.AlignLeft;
+import services.AlignRight;
+import services.AlignStrategy;
+
+public class Paragraph implements Element, Visitee {
 	private String name;
 	private AlignStrategy textAlignment;
 	
@@ -29,13 +34,12 @@ public class Paragraph implements Element {
 
 	@Override
 	public void add(Element element) {
-		
+		return;
 	}
 
 	@Override
 	public void remove(Element element) {
-		// TODO Auto-generated method stub
-		
+		return;
 	}
 
     @Override
@@ -56,6 +60,12 @@ public class Paragraph implements Element {
 
 	public void setAlignStrategy(AlignCenter alignCenter) {
 		textAlignment = new AlignCenter();
+		
+	}
+
+	@Override
+	public void accept(Visitor x) {
+		x.visitParagraph(this);
 		
 	}
 }

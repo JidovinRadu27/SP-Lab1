@@ -1,14 +1,14 @@
-package default_package;
+package services;
 
-public class AlignLeft implements AlignStrategy {
+public class AlignCenter implements AlignStrategy{
 
 private String text;
 	
-	public AlignLeft() {}
+	public AlignCenter() {}
 
 	@Override
 	public void render(String ph) {
-		System.out.println("Paragraph: " + ph);
+		System.out.println(String.format("%30s", "Paragraph: " + ph));
 	}
 
 	public String getText() {

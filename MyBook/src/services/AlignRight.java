@@ -1,4 +1,4 @@
-package default_package;
+package services;
 
 public class AlignRight implements AlignStrategy {
 

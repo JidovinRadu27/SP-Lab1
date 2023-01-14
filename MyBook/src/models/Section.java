@@ -1,8 +1,8 @@
-package default_package;
+package models;
 
 import java.util.ArrayList;
 
-public class Section implements Element{
+public class Section implements Element, Visitee{
 
 	private String name;
 	private ArrayList<Element> elements;
@@ -35,6 +35,13 @@ public class Section implements Element{
 	@Override
 	public Element get(int element) {
 		return null;		
+	}
+
+	@Override
+	public void accept(Visitor x) {
+		for(Element elm:elements) {
+			elm.accept(x);
+		}
 	}
 	
 	

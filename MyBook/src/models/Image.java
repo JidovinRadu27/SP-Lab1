@@ -1,9 +1,12 @@
-package default_package;
+package models;
 
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
-public class Image extends ImageLoaderFactory implements Element,Picture  {
+import services.ImageLoaderFactory;
+import services.Picture;
+
+public class Image extends ImageLoaderFactory implements Element,Picture,Visitee  {
 
     private String imageName;
 
@@ -49,5 +52,11 @@ public class Image extends ImageLoaderFactory implements Element,Picture  {
 	@Override
 	public Element get(int element) {
 		return null;		
+	}
+
+	@Override
+	public void accept(Visitor x) {
+		x.visitImage(this);
+		
 	}
 }

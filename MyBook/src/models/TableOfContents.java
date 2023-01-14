@@ -1,6 +1,6 @@
-package default_package;
+package models;
 
-public class TableOfContents implements Element{
+public class TableOfContents implements Element, Visitee{
 
 	private String table;
 	
@@ -39,5 +39,11 @@ public class TableOfContents implements Element{
     public Element get(int element) {
         return null;
     }
+
+	@Override
+	public void accept(Visitor x) {
+		x.visitTableOfContents(this);
+		
+	}
 
 }
