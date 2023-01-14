@@ -2,6 +2,7 @@ package default_package;
 
 public class Paragraph implements Element {
 	private String name;
+	private AlignStrategy textAlignment;
 	
 	public Paragraph(String name) {
 		super();
@@ -18,7 +19,11 @@ public class Paragraph implements Element {
 
 	@Override
 	public void print() {
-		System.out.println("Paragraph: " + name);
+	
+		if(textAlignment==null)
+			System.out.println("Paragraph: " + name);
+		else
+			textAlignment.render(name);
 		
 	}
 
@@ -38,4 +43,19 @@ public class Paragraph implements Element {
         return null;
     }	
 	
+    public void setAlignStrategy (AlignRight alignRight) {
+ 
+		textAlignment = new AlignRight();
+    	
+    }
+
+	public void setAlignStrategy(AlignLeft alignLeft) {
+
+		textAlignment = new AlignLeft();
+	}
+
+	public void setAlignStrategy(AlignCenter alignCenter) {
+		textAlignment = new AlignCenter();
+		
+	}
 }

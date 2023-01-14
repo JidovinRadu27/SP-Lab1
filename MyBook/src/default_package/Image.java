@@ -3,7 +3,7 @@ package default_package;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
-public class Image implements Element,Picture {
+public class Image extends ImageLoaderFactory implements Element,Picture  {
 
     private String imageName;
 
@@ -29,10 +29,6 @@ public class Image implements Element,Picture {
     {
 
     }
-
-//    public int get(int x) {
-//        
-//    }
 
 
     @Override
